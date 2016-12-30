@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{background-color:#333;}
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+            <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+        </filter>
+
+        <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#5b4227" stop-opacity="1"></stop>
+            <stop offset="57%" stop-color="#eeb272" stop-opacity="1"></stop>
+            <stop offset="100%" stop-color="#b2814c" stop-opacity="1"></stop>
+        </linearGradient>
+
+        <linearGradient id="title-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#202020" stop-opacity="1"></stop>
+            <stop offset="100%" stop-color="#2f2f2f" stop-opacity="1"></stop>
+        </linearGradient>
+    </defs>
+
+    <mask id="title-mask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+        <linearGradient id="fade_right_svg_gradient" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="30%" stop-color="#fff" stop-opacity="1"></stop>
+            <stop offset="67%" stop-color="#000" stop-opacity="1"></stop>
+        </linearGradient>
+
+        <rect x="0" y="0" width="1" height="1" fill="url(#fade_right_svg_gradient)"></rect>
+    </mask>
+</svg>
+
+<div class="content">
+    <section class="welcome">
+        <!--						<h2>welcome</h2>-->
+        <h2 style="opacity: 0.6;">
+            <svg width="100%" height="1em">
+                <text x="0" y="1em" fill="url(#title-gradient)" mask="url(#title-mask)">welcome</text>
+            </svg>
+        </h2>
+        <div class="content-container">
+            <svg width="100%" height="7.05em" class="visible">
+                <text fill="url(#text-gradient)" x="0" y="1em">Hi, I'm Petar and I have dedicated my entire</text>
+                <text fill="url(#text-gradient)" x="3em" y="2.5em">professional and personal orientation toward</text>
+                <text fill="url(#text-gradient)" x="0" y="4em">developing myself into not only being the best</text>
+                <text fill="url(#text-gradient)" x="0" y="5.5em">possible designer I can be, but being one step</text>
+                <text fill="url(#text-gradient)" x="0" y="7em">ahead of the curve at all times.</text>
+            </svg>
+
+            <svg width="100%" height="7.0em" class="hidden tablet">
+                <text fill="url(#text-gradient)" x="0" y="1em">Hi, I'm Petar and I have dedicated my entire</text>
+                <text fill="url(#text-gradient)" x="0" y="2.5em">professional and personal orientation toward</text>
+                <text fill="url(#text-gradient)" x="0" y="4em">developing myself intonot only being the best</text>
+                <text fill="url(#text-gradient)" x="0" y="5.5em">possible designer I can be, but being one step</text>
+                <text fill="url(#text-gradient)" x="0" y="7.0em">ahead of the curve at all times.</text>
+            </svg>
+
+            <!--							<p data-bullet="01" class="bullet">Hi, I'm Petar and I have dedicated my entire<br /> professional and personal orientation toward<br /> developing myself into not only being the best<br /> possible designer I can be, but being one step<br /> ahead of the curve at all times.</p>	-->
+            <p>It is my personal choice not to have any single goal or idol, because I believe that once you reach your goal<br> and surpass it you will start to stagnate; instead I have a direction in which I am developing my talent hoping it<br> will always bring unique and measurable results to my clients.</p>
+            <p>For me, true success comes from giving 200% on all projects I accept to work on. That means keeping an eye<br> on all the small details within the design and creating something that makes sense for both the users and<br> clients. </p>
+            <p>I don't think that there are small or big clients, instead I choose to work only on opportunities that excite me,<br> because that excitement translates into passion which allows me to create something unique - something that<br> creates a memorable effect on anyone who sees it.</p>
+        </div>
+    </section>
+</div>
+</body>
+</html>
