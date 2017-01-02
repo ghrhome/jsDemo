@@ -1,0 +1,85 @@
+.awesome-shit {
+    margin-bottom: 10%;
+    padding: 0;
+    overflow: visible;
+}
+.frame {
+    max-width: 307px;
+    max-width: 16.3908%;
+    max-width: calc(100vw / 1080 * 172.6875);
+    margin: 10% auto 0;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.awesome-shit .border.bottom, .awesome-shit .border.top {
+    width: 0;
+    z-index: 9;
+}
+.awesome-shit .border {
+    position: absolute;
+    z-index: 1;
+}
+
+.awesome-shit .border.top {
+    border-top: .5208vw solid #9d713c;
+    top: 0;
+}
+.awesome-shit .border.right {
+    right: 0;
+    border-right: .5208vw solid #9d713c;
+}
+
+.awesome-shit .border.left, .awesome-shit .border.right {
+    height: 0;
+    box-shadow: 2px 2px 2px 2px #151515;
+}
+
+.animate.awesome-shit .border.bottom, .animate.awesome-shit .border.top {
+    -webkit-transition-property: width,left;
+    transition-property: width,left;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    width: 100%;
+}
+
+.animate.awesome-shit .border.left, .animate.awesome-shit .border.right {
+    -webkit-transition-property: height,top;
+    transition-property: height,top;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
+    transition-timing-function: cubic-bezier(.19,1,.22,1);
+    height: 100%;
+}
+
+.animate.awesome-shit .border.top {
+    -webkit-transition-delay: 250ms;
+    transition-delay: 250ms;
+}
+.animate.awesome-shit .border.bottom {
+    left: 0;
+    -webkit-transition-delay: 750ms;
+    transition-delay: 750ms;
+}
+.awesome-shit .border.bottom, .awesome-shit .border.top {
+    width: 0;
+    z-index: 9;
+}
+.awesome-shit .border.bottom {
+    bottom: 0;
+    left: 100%;
+    border-bottom: .5208vw solid #9d713c;
+}
+
+.awesome-shit .border.left {
+    top: 100%;
+    left: 0;
+    border-left: .5208vw solid #9d713c;
+}
+
+.animate.awesome-shit .border.left {
+    top: 0;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
